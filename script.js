@@ -1,14 +1,10 @@
-const second = 1000,
-      minute = second * 60,
-      hour = minute * 60,
-      day = hour * 24;
-
 var time = document.getElementById("time");
 var start = document.getElementById("start");
 var stop = document.getElementById("stop");
 
 var minutes = 0;
 var seconds = 0;
+var hours = '';
 
 var interval;
 
@@ -42,14 +38,37 @@ function stopTimer() {
 function myTimer() {
     if (seconds > 0) {
         seconds--;
-        time.value = minutes + ":" + seconds;
+        printTime();
         console.log(minutes + ":" + seconds);
     } else if (seconds == 0) {
         minutes--;
         seconds = 59;
-        time.value = minutes + ":" + seconds;
-        console.log(minutes + ":" + seconds);
+        printTime();
     } else {
         return;
     }
+}
+
+function printTime() {
+    var fhours = formatTime(hours);
+    var fminutes = formatTime(minutes);
+    var fseconds = formatTime(seconds);
+    
+    if (hours == '') {
+        time.value = fminutes + ":" + fseconds;
+    } else if (hours != '') {
+        time.value = fhours + ":" + fminutes + ":" + fseconds;
+    } else if (hours < 0) {
+        alert("Please enter valid time");
+    }
+}
+
+function formatTime(time) {
+    var ftime = '';
+    if (time < 10) {
+        ftime = '0' + time;
+    } else {
+        ftime = time;
+    }
+    return ftime;
 }
