@@ -49,20 +49,6 @@ function myTimer() {
     }
 }
 
-function printTime() {
-    var fhours = formatTime(hours);
-    var fminutes = formatTime(minutes);
-    var fseconds = formatTime(seconds);
-    
-    if (hours == '') {
-        time.value = fminutes + ":" + fseconds;
-    } else if (hours != '') {
-        time.value = fhours + ":" + fminutes + ":" + fseconds;
-    } else if (hours < 0) {
-        alert("Please enter valid time");
-    }
-}
-
 function formatTime(time) {
     var ftime = '';
     if (time < 10) {
@@ -72,3 +58,20 @@ function formatTime(time) {
     }
     return ftime;
 }
+
+function printTime() {
+    var fhours = formatTime(hours);
+    var fminutes = formatTime(minutes);
+    var fseconds = formatTime(seconds);
+    
+    if (hours == '') {
+        time.value = fminutes + ":" + fseconds;
+        console.log(fminutes + ":" + fseconds);
+    } else if (hours != '') {
+        time.value = fhours + ":" + fminutes + ":" + fseconds;
+        console.log(fhours + ":" + fminutes + ":" + fseconds);
+    } else if (hours < 0) {
+        alert("Please enter valid time");
+    }
+}
+
