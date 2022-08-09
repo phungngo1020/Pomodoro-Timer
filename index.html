@@ -8,26 +8,57 @@
     </head>
       
     <body>
+        <div class="main-container">
+            <nav class="navigation">
+                <a href="" class="nav-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="36.19" viewBox="0 0 35 36.19">
+                        <g id="Group_26" data-name="Group 26" transform="translate(-123 -734.81)">
+                            <line id="Line_38" data-name="Line 38" y1="34" x2="14" transform="translate(132 735)" fill="none" stroke="#383838" stroke-width="1"/>
+                            <text id="P" transform="translate(132 758)" fill="#156415" font-size="25" font-family="BigCaslon-Medium, Big Caslon" font-weight="500" letter-spacing="0.03em"><tspan x="-8.2" y="0">P</tspan></text>
+                            <text id="N" transform="translate(147 765)" fill="#156415" font-size="25" font-family="BigCaslon-Medium, Big Caslon" font-weight="500" letter-spacing="0.03em"><tspan x="-10.938" y="0">N</tspan></text>
+                        </g>
+                    </svg>
+                </a>
+    
+                <div class="nav-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="219" height="21" viewBox="0 0 219 21">
+                        <rect id="Rectangle_13" data-name="Rectangle 13" width="219" height="4" transform="translate(0 9)" fill="#156415"/>
+                        <text id="POMODORO_TIMER" data-name="POMODORO TIMER" transform="translate(208 15)" font-size="20" font-family="Helvetica-Oblique, Helvetica" letter-spacing="0.04em" font-style="oblique"><tspan x="-198.73" y="0">POMODORO</tspan><tspan y="0" font-family="CorsivaHebrew, Corsiva Hebrew" font-style="normal"> </tspan><tspan y="0">TIMER</tspan></text>
+                      </svg>                  
+                </div>
+            </nav>
+    
+    
+            <div class="timer-container">
+                <p id="time-title"><i>WORK TIME!</i></p>
+                <!-- <p class="date-text">08.09.2022</p> -->
+                <input type="text" class="displaySecondsLeft" id="time" value="25:00">
+                <div class="buttons-container">
+                    <button class="display__start" id="start">
+                        <p class="start">START</p>
+                    </button>
+                    <button class="display__stop" id="stop">
+                        <p class="stop">STOP</p>
+                    </button>
+                </div>
+            </div>
 
-        <div class="logo">
-            <i class="icon ion-md-ice-cream"></i>
-        </div>
-        <div class="timer">
-            <div class="container">
-                <div class="display">
-                    <input type="text" class="displaySecondsLeft" id="time" value="25:00">
-                    <div class="display__start" id="start">
-                        <p class="start">Start</p>
-                    </div>
-                    <div class="display__stop" id="stop">
-                        <p class="stop">Stop</p>
-                    </div>
+            <div class="videos-pagination">
+                <button class="bg" id="bg-1">WAVES</button> <!-- Sky -->
+                <button class="bg" id="bg-2">CLOUDS</button> <!-- Waves -->
+                <button class="bg" id="bg-3">FLOWERS</button> <!-- Flowers -->
+            </div>
+
+            <div class="background">
+                <div class="background-photo" id="videobox">
+                    <video autoPlay="true" muted="true" loop="true" id="myVideo">
+                        <source src="./waves.mp4" type="video/mp4" />
+                    </video>
                 </div>
             </div>
         </div>
 
         <script src="./script.js"></script>
-
+        <script src="./bg-pagination.js"></script>
     </body>
-      
 </html>
