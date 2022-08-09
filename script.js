@@ -44,12 +44,12 @@ function myTimer() {
         workTime = !workTime;
         console.log(workTime);
         if (workTime == true) {
-            timeTitle.innerHTML = "Work Time!";
+            timeTitle.innerHTML = "WORK TIME!";
             clearInterval(interval);
             time.value = "25:00";
             return;
         } else {
-            timeTitle.innerHTML = "Break Time!";
+            timeTitle.innerHTML = "BREAK TIME!";
             clearInterval(interval);
             time.value = "05:00";
             return;
